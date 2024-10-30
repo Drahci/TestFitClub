@@ -1,0 +1,160 @@
+* {
+  margin: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-orange: #f9ac54;
+  --font-size: "Poppins";
+  --bk-collor: #111317;
+}
+
+body {
+  background-color: var(--bk-collor);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    " nav nav "
+    " hero  imgHeader"
+    " footer footer";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.menu {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navBox {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navBox a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#joinNow {
+  background-color: var(--color-orange);
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.highlight {
+  color: var(--color-orange);
+  font-size: 1.4rem;
+  padding-bottom: -8rem;
+  margin-top: 2rem;
+}
+
+.hero {
+  grid-area: hero;
+  max-width: 45rem;
+  margin-left: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: #ffffff;
+}
+
+.hero h1 span {
+  font-size: 5rem;
+  font-weight: 100;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem #ffffff;
+}
+
+.description {
+  color: #d1d5db;
+  font-size: 1.4rem;
+}
+
+.button {
+  background-color: var(--color-orange);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  max-width: 15rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.bkFit {
+  font-size: 20rem;
+  color: #35373b;
+  opacity: 15%;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 0;
+  top: 35rem;
+  left: -65rem;
+}
+
+#imgHeader {
+  grid-area: imgHeader;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circulo-container {
+  position: absolute;
+}
+
+.circulo {
+  width: 35rem;
+  height: 35rem;
+  opacity: 15%;
+  top: 9.5rem;
+  left: -2rem;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.circulo::before {
+  content: "";
+  width: 25rem;
+  height: 25rem;
+  top: 5rem;
+  left: 4.5rem;
+  background-color: var(--bk-collor);
+  border-radius: 50%;
+  position: absolute;
+}
+#transpImg {
+  position: relative;
+  z-index: 2;
+  top: 7.5rem;
+  max-width: 40rem;
+  height: 50rem;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  color: #d1d5db;
+  padding: 1rem;
+}
